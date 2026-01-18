@@ -2,47 +2,75 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Моды Modrinth</title>
+<title>Моды</title>
+
 <style>
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --hover: #1f2430;
+  --text: #e6e6e6;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background: #0f0f10;
-  color: #eaeaea;
-  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
 }
+
 h1 {
-  padding: 16px;
   margin: 0;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 600;
 }
+
 .mods {
+  padding: 16px 20px 24px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 12px;
-  padding: 16px;
+  gap: 14px;
 }
+
 .mod {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px;
-  background: #18181b;
-  border-radius: 12px;
+  gap: 14px;
+  padding: 14px;
+  background: var(--card);
+  border-radius: var(--radius);
   text-decoration: none;
   color: inherit;
+  transition: background .15s ease;
 }
+
 .mod:hover {
-  background: #232329;
+  background: var(--hover);
 }
+
 .mod img {
   width: 48px;
   height: 48px;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
 }
+
+.mod span {
+  font-size: 15px;
+  font-weight: 500;
+}
 </style>
+
 </head>
 <body>
-<h1>Моды</h1>
+
+<h1>Список модов</h1>
 <div class="mods">
 
 <a class="mod" href="https://modrinth.com/mod/sodium/versions" target="_blank">
@@ -186,5 +214,6 @@ h1 {
 </a>
 
 </div>
+
 </body>
 </html>
